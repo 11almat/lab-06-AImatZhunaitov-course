@@ -80,6 +80,10 @@ The guiding questions are prompts, not a form.
 
 - For each control: what does it cost (errors, speed, reviewer time, applicant privacy, extra model
   calls), and what harm does it prevent? Use your before-and-after measurement where you can.
+- The width of your escalation band is a trade-off too: how many applicants does it send to a person, who reads
+  them, and what happens to the cases outside it that nobody re-checks? A threshold calibrated on one
+  configuration does not transfer to another: did you recalibrate it after you changed what the model
+  sees, and what share was actually escalated?
 - Why did you choose the balance you did, and what would make you choose differently?
 - What does the design **still fail to protect against**? What would closing that gap take, and why did
   you not do it?

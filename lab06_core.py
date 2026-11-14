@@ -34,8 +34,9 @@ ALLOWED_PURPOSES = frozenset({"scholarship_screening"})
 
 # Profile fields in the order the model is shown them, with their line labels. This mirrors the
 # "default" layout of ``lab06_data.render_profile`` (a test checks they agree when both are importable).
+# ``pid`` is not shown to the model (it stays on ``Profile`` and in the decision log), so it is not a
+# renderable field and cannot be blinded.
 FIELD_LABELS = (
-    ("pid", "Application ID"),
     ("name", "Name"),
     ("university", "University"),
     ("program", "Program"),
@@ -193,9 +194,9 @@ def render_for_model(profile: Profile, withheld: Sequence[str] = ()) -> str:
     """The text the model sees: one ``Label: value`` line per field, fields in ``withheld`` left out.
 
     Same layout as the default order of ``lab06_data.render_profile`` (which also supports field
-    exclusion, via ``hide=``). This local copy keeps the core standalone; to render with the data
-    module's ``order="alt"`` (null pairs), pass ``render=lambda p, hide: render_profile(p, order=..., hide=hide)``
-    to ``screen``.
+    exclusion, via ``hide=``); the application id (``pid``) is not rendered. This local copy keeps the
+    core standalone; to render with the data module's ``order="alt"`` (order-probe pairs), pass
+    ``render=lambda p, hide: render_profile(p, order=..., hide=hide)`` to ``screen``.
     """
     lines = []
     for name, label in FIELD_LABELS:
@@ -305,7 +306,8 @@ def swap_university(profile: Profile) -> Profile:
 class Harness:
     """Which controls are on. ``BARE`` has none.
 
-    ``blind`` names Profile fields kept from the model (they must be in ``PROFILE_FIELDS``).
+    ``blind`` names Profile fields kept from the model (they must be in ``PROFILE_FIELDS``, i.e. fields the
+    model is shown; ``pid`` is never shown, so it is not accepted).
     ``borderline`` is an inclusive score band for escalation. ``counterfactual_check`` re-runs the
     model on a protected-attribute swap and escalates if the two decisions differ; it DOUBLES the
     model calls and escalates even when ``escalate`` is off (that is its only purpose).
