@@ -1,0 +1,47 @@
+{
+  "_comment": "All entries are invented for Lab 06. University names and place names are made up and were not checked against any registry (no network access when written). Given and family names are chosen only as plausible first + family name combinations in transliterated Latin script; no entry refers to a real person. Given names are unique across all language groups (checked in test_lab06_data.py) so a full name identifies its group by its first token.",
+  "universities": [
+    {"name": "Merkhan National University", "tier": "flagship"},
+    {"name": "Taldara Institute of Technology", "tier": "flagship"},
+    {"name": "Belkum State University", "tier": "flagship"},
+    {"name": "Oztau Research University", "tier": "flagship"},
+    {"name": "Sarymont Polytechnic University", "tier": "flagship"},
+    {"name": "Karasai Provincial College", "tier": "regional"},
+    {"name": "Zhaltyr Regional Institute", "tier": "regional"},
+    {"name": "Tumarsay Municipal University", "tier": "regional"},
+    {"name": "Aksengir Teachers' Institute", "tier": "regional"},
+    {"name": "Kokdala Open Institute", "tier": "regional"}
+  ],
+  "programs": [
+    "Economics",
+    "Computer Science",
+    "Finance",
+    "Management",
+    "Statistics",
+    "Mechanical Engineering",
+    "Biology",
+    "Mathematics",
+    "Public Administration",
+    "Law"
+  ],
+  "names": {
+    "kazakh": {
+      "male": ["Aibek", "Nurlan", "Daulet", "Yerlan", "Bauyrzhan", "Askar", "Marat", "Timur", "Arman", "Serik", "Dias", "Yerbol", "Aidos", "Zhandos", "Kairat", "Samat"],
+      "female": ["Aigerim", "Dana", "Madina", "Zhanar", "Gulnara", "Aliya", "Saltanat", "Assel", "Botagoz", "Dinara", "Aruzhan", "Meruyert", "Zhibek", "Balzhan", "Ainur", "Karlygash"],
+      "family_male": ["Abdrakhmanov", "Sadykov", "Zhumabayev", "Omarov", "Kassymov", "Bekmukhambetov", "Tulegenov", "Dosmukhambetov", "Akhmetov", "Kenzhebayev", "Utepov", "Mukhametzhanov"],
+      "family_female": ["Abdrakhmanova", "Sadykova", "Zhumabayeva", "Omarova", "Kassymova", "Bekmukhambetova", "Tulegenova", "Dosmukhambetova", "Akhmetova", "Kenzhebayeva", "Utepova", "Mukhametzhanova"]
+    },
+    "russian": {
+      "male": ["Dmitry", "Sergey", "Andrey", "Alexey", "Mikhail", "Nikolay", "Pavel", "Igor", "Viktor", "Oleg", "Vladimir", "Maxim", "Yuri", "Denis", "Roman", "Kirill"],
+      "female": ["Olga", "Natalia", "Elena", "Irina", "Svetlana", "Tatiana", "Marina", "Anastasia", "Ekaterina", "Yulia", "Galina", "Larisa", "Nadezhda", "Polina", "Valentina", "Oksana"],
+      "family_male": ["Petrov", "Smirnov", "Kuznetsov", "Sokolov", "Lebedev", "Volkov", "Morozov", "Novikov", "Fedorov", "Orlov", "Belov", "Zaitsev"],
+      "family_female": ["Petrova", "Smirnova", "Kuznetsova", "Sokolova", "Lebedeva", "Volkova", "Morozova", "Novikova", "Fedorova", "Orlova", "Belova", "Zaitseva"]
+    },
+    "english": {
+      "male": ["James", "Thomas", "William", "Daniel", "Henry", "George", "Edward", "Oliver", "Samuel", "Benjamin", "Charles", "Peter", "Robert", "Jack", "Arthur", "Frederick"],
+      "female": ["Emily", "Charlotte", "Sarah", "Hannah", "Alice", "Laura", "Rebecca", "Katherine", "Margaret", "Eleanor", "Victoria", "Helen", "Lucy", "Grace", "Rachel", "Sophie"],
+      "family_male": ["Smith", "Taylor", "Brown", "Wilson", "Clarke", "Walker", "Turner", "Hughes", "Bennett", "Cooper", "Harris", "Parker"],
+      "family_female": ["Smith", "Taylor", "Brown", "Wilson", "Clarke", "Walker", "Turner", "Hughes", "Bennett", "Cooper", "Harris", "Parker"]
+    }
+  }
+}
